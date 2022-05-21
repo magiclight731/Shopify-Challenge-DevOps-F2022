@@ -1,6 +1,10 @@
 from .models import Warehouse, Item
 from .serializers import WarehouseSerializer, ItemSerializer
 from rest_framework import generics, mixins
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
+
 # View classes. These are mostly constructed using generics and/or mixins,
 # which simplify code but may be somewhat harder to understand without prior research.
 
@@ -39,3 +43,18 @@ class ItemSingle(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+
+
+@api_view(['GET'])  # users can only make GET requests for the following
+def api_root(request):
+    """
+    'root' endpoint view of our API.
+    Since this is a one-off and only needs GET access, we use a function setup to reduce complexity,
+    instead of a class setup to reduce code reuse, as was done above.
+    :param request: the HTTP request calling this
+    :return: links to the item-list and warehouse-list endpoints on whatever server is running
+    """
+    return Response({
+        'items': reverse('item-list', request=request),
+        'warehouses': reverse('warehouse-list', request=request)
+    })

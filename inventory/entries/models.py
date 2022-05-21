@@ -15,7 +15,7 @@ class Warehouse(models.Model):
         represent this Warehouse as a string
         :return: a string containing this Warehouse's name and primary key
         """
-        return str(self.name) + str(self.pk)
+        return str(self.name) + " (" + str(self.pk) + ")"
 
 
 class Item(models.Model):
@@ -30,11 +30,12 @@ class Item(models.Model):
     """
     name = models.CharField(max_length=200)
     arrival_date = models.DateField('date added to inventory')
-    location = models.ForeignKey(to=Warehouse, on_delete=models.SET_NULL, null=True)
+    location = models.ForeignKey(to=Warehouse, related_name='items_at_warehouse',
+                                 on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         """
         represent this item as a string
         :return: a string containing this item's name and primary key
         """
-        return str(self.name) + str(self.pk)
+        return str(self.name) + " (" + str(self.pk) + ")"
