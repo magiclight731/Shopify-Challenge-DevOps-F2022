@@ -6,8 +6,9 @@ Developer Intern Challenge
 
 My web app runs using Python3's [Django](https://www.djangoproject.com/) and [Django REST Framework](https://www.django-rest-framework.org/) libraries. To run the code, do the following:
 1. Set up a Python3 environment using the included [`requirements.txt`](./requirements.txt) file.
-2. open the [`inventory`](./inventory) directory.
-3. Run `python3 manage.py runserver`.
+2. Open the [`inventory`](./inventory) directory.
+3. Run `python3 manage.py migrate`. This sets up the database.
+4. Run `python3 manage.py runserver`. This starts the server.
 * Note that this defaults to running an IPv4 local server on port 8000. A full server setup with load balancing and reverse proxying and so on is not the focus of this project, so it is not included.
 
 For the additional feature, I chose to implement warehouses. 
