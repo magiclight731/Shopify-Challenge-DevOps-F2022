@@ -1,3 +1,4 @@
+### Python Template
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -209,3 +210,7 @@ fabric.properties
 
 # idea folder, uncomment if you don't need it
 .idea
+
+### Repl-specific ignores
+# repl run file
+.replit

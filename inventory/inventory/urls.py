@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+# added to create a root home page
+from .views import redirect_view
+
 urlpatterns = [
     path('entries/', include('entries.urls')),
     path('admin/', admin.site.urls),
+    path('', redirect_view)
 ]
