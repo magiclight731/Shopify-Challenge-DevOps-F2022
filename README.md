@@ -8,7 +8,7 @@ My web app runs using Python3's [Django](https://www.djangoproject.com/) and [Dj
 1. Set up a Python3 environment using the included [`requirements.txt`](./requirements.txt) file.
 2. open the [`inventory`](./inventory) directory.
 3. Run `python3 manage.py runserver`.
-* Note that this defaults to running an IPv4 local server on port 8000. The port can be changed, but running public-facing is the job of other code.
+* Note that this defaults to running an IPv4 local server on port 8000. A full server setup with load balancing and reverse proxying and so on is not the focus of this project, so it is not included.
 
 For the additional feature, I chose to implement warehouses. 
 There is a seperate endpoint for CRUD operations on warehouses, and warehouses have a one-to-many relationship with items. (that is, one warehouse can have manyy items, or many items can be at one warehouse.) 
