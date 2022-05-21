@@ -4,9 +4,9 @@ Fall 2022 - Shopify
 
 Developer Intern Challenge
 
-My web app runs using Python3's Django and Django REST Framework libraries. To run the code, do the following:
-1. Set up a Python3 environment using the included `requirements.txt` file.
-2. open the `inventory` directory.
+My web app runs using Python3's [Django]() and [Django REST Framework]() libraries. To run the code, do the following:
+1. Set up a Python3 environment using the included [`requirements.txt`](./requirements.txt) file.
+2. open the [`inventory`](./inventory) directory.
 3. Run `python3 manage.py runserver`.
 * Note that this defaults to running an IPv4 local server on port 8000. The port can be changed, but running public-facing is the job of other code.
 
