@@ -4,7 +4,7 @@ Fall 2022 - Shopify
 
 Developer Intern Challenge
 
-My web app runs using Python3's [Django]() and [Django REST Framework]() libraries. To run the code, do the following:
+My web app runs using Python3's [Django](https://www.djangoproject.com/) and [Django REST Framework](https://www.django-rest-framework.org/) libraries. To run the code, do the following:
 1. Set up a Python3 environment using the included [`requirements.txt`](./requirements.txt) file.
 2. open the [`inventory`](./inventory) directory.
 3. Run `python3 manage.py runserver`.
